@@ -1,0 +1,10 @@
+@use '@/style/font.scss';
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url('/bg.png');
+  background-repeat: repeat;
+  overflow: hidden;
+  @extend .text-color-base;
+}

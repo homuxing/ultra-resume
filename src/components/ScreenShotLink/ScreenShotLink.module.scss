@@ -1,0 +1,21 @@
+.screen-shot-link {
+  display: block;
+  background-color: #c9c9c9;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+  position: fixed;
+  right: calc(50% - 450px - 92px);
+  border-radius: 2px;
+  left: auto;
+  bottom: 3.25rem;
+  i{
+    margin-right: 0.5rem;
+  }
+  @media screen and (max-width: 768px) {
+    right: auto;
+    left: calc(100% - 98px);
+  }
+  @media print {
+    display: none;
+  }
+}

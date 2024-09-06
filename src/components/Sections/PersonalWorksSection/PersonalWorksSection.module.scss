@@ -1,0 +1,40 @@
+@use '@/style/font.scss';
+@use '@/style/base.scss';
+.personal-works-block {
+  @extend .text-base;
+  .works-name {
+    text-align: center;
+    margin-bottom: 0.25rem;
+    margin-top: 0.5rem;
+    @extend .font-bold;
+    @extend .text-xl;
+  }
+  .works-blog {
+    float: right;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: base.$device) {
+      display: none;
+    }
+    .works-blog-pic {
+      display: block;
+    }
+    .works-blog-alt {
+      @extend .text-sm;
+      @extend .text-color-light;
+      text-align: center;
+    }
+  }
+  .article-title {
+    @media screen and (max-width: base.$device) {
+      text-decoration: underline;
+    }
+  }
+  .article-link {
+    text-decoration: underline;
+    @media screen and (max-width: base.$device) {
+      display: none;
+    }
+  }
+}

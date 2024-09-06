@@ -1,0 +1,22 @@
+.pdf-download{
+  position: relative;
+  display: block;
+  background-color: #c9c9c9;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+  position: fixed;
+  right: calc(50% - 450px - 120px);
+  border-radius: 2px;
+  left: auto;
+  bottom: 1rem;
+  i{
+    margin-right: 0.5rem;
+  }
+  @media screen and (max-width: 768px) {
+    right: auto;
+    left: calc(100% - 126px);
+  }
+  @media print {
+    display: none;
+  }
+}

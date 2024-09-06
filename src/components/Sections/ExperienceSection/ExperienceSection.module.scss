@@ -1,0 +1,56 @@
+@use '@/style/font.scss';
+@use '@/style/base.scss';
+.exp-block {
+  &:first-child {
+    .exp-company {
+      margin-top: 0;
+    }
+  }
+  @extend .text-base;
+  .exp-company {
+    margin-bottom: 0.25rem;
+    margin-top: 0.75rem;
+    text-align: center;
+    @extend .font-bold;
+    @extend .text-xl;
+  }
+}
+.project-exp-block {
+  position: relative;
+  padding-left: 1rem;
+  .project-exp-name {
+    @extend .text-xl;
+    @extend .font-bold;
+    display: flex;
+    align-items: center;
+    margin-top: 0.75rem;
+    padding-right: 0.5rem;
+    margin-left: -0.75rem;
+    @media screen and (max-width: base.$device) {
+      padding: 0;
+    }
+  }
+  .project-exp-name-icon {
+    margin-right: 0.5rem;
+  }
+  .project-exp-name-divider {
+    display: block;
+    margin-left: 1em;
+    border-bottom: 1px dashed base.$light-grey;
+    flex: 1;
+    height: 0;
+  }
+  .project-exp-introduction {
+    padding-left: 1rem;
+  }
+  .project-exp-highlights {
+    @extend .project-exp-introduction;
+  }
+  .project-exp-pic {
+    float: right;
+    margin-left: 1rem;
+    @media screen and (max-width: base.$device) {
+      display: none;
+    }
+  }
+}

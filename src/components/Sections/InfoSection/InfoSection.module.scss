@@ -1,0 +1,79 @@
+@use '@/style/font.scss';
+@use '@/style/base.scss';
+.info-block {
+  display: flex;
+  @extend .text-base;
+  
+  .info-wrapper {
+    flex: 1;
+    padding-right: 1rem;
+  }
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px dashed base.$light-grey;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    @extend .text-color-heavy;
+    @extend .font-bold;
+    .title-name {
+      font-size: 3rem;
+    }
+    .title-job {
+      font-size: 2.25rem;
+    }
+    @media print {
+      border-bottom: base.$print-dashed;
+    }
+    @media screen and (max-width: base.$device) {
+      flex-wrap: wrap;
+      .title-name {
+        font-size: 2.875rem;
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+  .info-list {
+    display: flex;
+    justify-content: space-between;
+    @extend .text-lg;
+    .info-contact {
+      text-align: right;
+      i {
+        margin-left: 0.5rem;
+      }
+    }
+    @media screen and (max-width: base.$device) {
+      flex-wrap: wrap;
+      .info-contact {
+        text-align: left;
+        li {
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+          justify-content: flex-end;
+          i{
+            margin-left: 0;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  
+  .pic {
+    flex: 0 1 auto;
+    padding: 0.5rem;
+    img {
+      display: block;
+    }
+    @media screen and (max-width: base.$device) {
+      display: none;
+    }
+  }
+  
+}
+
+

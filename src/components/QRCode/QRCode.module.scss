@@ -1,0 +1,40 @@
+@use '@/style/base.scss';
+.qr-code {
+  display: block;
+  cursor: pointer;
+  background-color: #c9c9c9;
+  padding: 1rem 1rem;
+  color: #fff;
+  position: fixed;
+  right: calc(50% - 450px - 36px);
+  border-radius: 2px;
+  left: auto;
+  bottom: 5.5rem;
+  i{
+    margin-right: 0.5rem;
+  }
+  @media screen and (max-width: 768px) {
+    right: auto;
+    left: calc(100% - 42px);
+  }
+  @media print {
+    display: none;
+  }
+}
+
+.qr-code-modal {
+  .qr-code-modal-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    @media screen and (max-width: base.$device) {
+      max-height: 360px;
+      overflow-y: auto;
+    }
+    .qr-code-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

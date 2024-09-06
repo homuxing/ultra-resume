@@ -1,0 +1,29 @@
+@use '@/style/font.scss';
+@use '@/style/base.scss';
+.h2-divider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  @extend .font-bold;
+  @extend .text-2xl;
+  @extend .text-color-heavy;
+  .h2-divider-before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 1em;
+    border-left: 4px solid base.$black;
+  }
+  .h2-divider-after {
+    flex: 1;
+    margin-left: 1rem;
+    height: 0;
+    border: 1px solid base.$black;
+  }
+}
